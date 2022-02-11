@@ -1,0 +1,33 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+.header{
+  background-color:teal;
+  text-align:left;
+}
+.header button {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-right: 20px;
+    background-color:lightsalmon;
+  }
+  .header h1{
+    background-color:lightsalmon;
+  }
+  .header ul{
+    display: inline-flex;
+    list-style: none;
+    color: black;
+}
+.header ul li{
+    
+    margin: 15px;
+    padding: 15px;
+}

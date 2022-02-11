@@ -1,0 +1,18 @@
+<p>resource-list works!</p>
+<!-- <p>{{resourceList}}</p> -->
+<div>
+    <table border="5">
+        <tr>
+            <th>EmpID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Mail ID</th>
+        </tr>
+        <tr *ngFor='let Rdata of data'>
+            <td>{{Rdata.empID}}</td> 
+            <td>{{Rdata.Name}}</td>
+            <td>{{Rdata.depatment}}</td>
+            <td>{{Rdata.email}}</td>
+        </tr>
+    </table>
+</div>
