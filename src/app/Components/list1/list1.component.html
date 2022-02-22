@@ -1,1 +1,12 @@
 <h3>list1 works!</h3>
+
+USER NAME : <input type="text" [(ngModel)]="userName">
+<button (click)="search()">Search</button>
+
+<div *ngIf="response">
+    <p>Login name: {{response.login}}</p>
+    <p>Followers: {{response.followers}}</p>
+    <p>Public: {{response.public_repos}}</p>
+    <p>ID:{{response.id}}</p>
+
+</div>
