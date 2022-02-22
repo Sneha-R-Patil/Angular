@@ -21,6 +21,10 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/addresourcelist']);
   }
  
+  // list1(){
+  //   this.router.navigate(['/list1']);
+  // }
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {

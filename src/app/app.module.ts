@@ -9,6 +9,11 @@ import { MyServiceService } from './Service/my-service.service';
 import { AddResourceComponent } from './Components/add-resource/add-resource.component';
 import { HomeComponent } from './Components/home/home.component';
 import { WildCardRouteComponent } from './Components/wild-card-route/wild-card-route.component';
+import { MyPipePipe } from './Pipe/my-pipe.pipe';
+import { NewmoduleModule } from './newmodule/newmodule.module';
+import { List1Component } from './Components/list1/list1.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,11 +22,16 @@ import { WildCardRouteComponent } from './Components/wild-card-route/wild-card-r
     ResourceListComponent,
     AddResourceComponent,
     HomeComponent,
-    WildCardRouteComponent
+    WildCardRouteComponent,
+    MyPipePipe,
+    List1Component,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NewmoduleModule,
+    FormsModule
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]

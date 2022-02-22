@@ -1,18 +1,30 @@
 <p>resource-list works!</p>
-<!-- <p>{{resourceList}}</p> -->
+
 <div>
     <table border="5">
         <tr>
             <th>EmpID</th>
             <th>Name</th>
+            <th>Gender</th>
             <th>Department</th>
             <th>Mail ID</th>
         </tr>
-        <tr *ngFor='let Rdata of data'>
+        <tr *ngFor='let Rdata of resourceData'>
             <td>{{Rdata.empID}}</td> 
-            <td>{{Rdata.Name}}</td>
-            <td>{{Rdata.depatment}}</td>
+            <td>{{Rdata.name | myPipe:Rdata.gender}}</td>
+            <td>{{Rdata.gender}}</td>
+            <td>{{Rdata.department}}</td>
             <td>{{Rdata.email}}</td>
         </tr>
     </table>
 </div>
+<br>
+
+ <app-add-resource [resource]="selectedResource" (resourceChange)="submit($event)"></app-add-resource> 
+<div>
+
+  
+    <button (click)="list1()">List1</button>
+    
+</div>
+<router-outlet></router-outlet>

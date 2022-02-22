@@ -1,25 +1,20 @@
-<!-- Bootstrap  -->
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
-
 <!-- <h1 style="background-color:lightsalmon;">{{headerTitle}}</h1> 
 <button style="margin:5px; padding:5px; background-color:lightyellow;" (click)="home()">Home</button>
 <button style="margin:5px; padding:5px; background-color:lightpink;" (click)="showResourceList()">ResourceList</button>
 <button style="margin:5px; padding:5px; background-color:lightskyblue;" (click)="addResourceList()">AddResource</button> -->
-
-
 
 <body>
 <div class="header">
     <ul>
         <li> <h1>{{headerTitle}}</h1></li>
         <li><button (click)="home()">Home</button> </li>
-        <li> <button (click)="showResourceList()">ResourceList</button></li>
+        <li> <button (click)="showResourceList()">ResourceLists</button></li>
         <li> <button (click)="addResourceList()">AddResource</button></li>
+        <!-- <li> <button (click)="list1()">List1</button></li> -->
    </ul>
 </div>
-  
-
+  <!-- Or routerpath gives through Link -->
+<!-- <a [routerLink]="['/home']">Home</a> -->
 </body>
 
 

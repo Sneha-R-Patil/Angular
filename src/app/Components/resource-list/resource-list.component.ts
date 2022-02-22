@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Resource } from 'src/app/resource';
 import { MyServiceService } from 'src/app/Service/my-service.service';
 
 @Component({
@@ -8,14 +10,34 @@ import { MyServiceService } from 'src/app/Service/my-service.service';
 })
 export class ResourceListComponent implements OnInit {
  
-  data:any=[];
-  constructor(private myservice:MyServiceService) { }
+ 
+  constructor(private myservice:MyServiceService, private router:Router) { }
 
-  ngOnInit(): void {
-    this.data = this.myservice.getResourceList();
-
+//Child Route
+  list1(){
+    this.router.navigate(['showresourcelist/list1']);
   }
 
+  selectedResource:Resource = new Resource();
+  resourceData : Resource[]=[];
+  ngOnInit(): void {
+    this.resourceData = this.myservice.getResourceList();
+}
+
+submit(resource:Resource) {
+  console.log(resource)
+  var cust=this.resourceData.find(e => e.empID==resource.empID)
+  if(cust==undefined){
+    alert("New Saved:"+resource.empID)
+    this.resourceData.push(resource);
+  }else{
+    Object.assign(cust,resource)
+    alert("Updated:"+resource.empID);
+  }
+
+  
+}
+ 
  
 
 }
